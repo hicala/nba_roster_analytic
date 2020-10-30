@@ -31,8 +31,3 @@ The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/
 ## Data info extracted:
 
 Name, POS ,Age ,HT ,WT ,College and Salary of Team Roster
-
-
-"# webscrap_nba_atlanta_hawks_roster_app" 
-"# webscrap_nba_atlanta_hawks_roster_app" 
-"# webscrap_nba_atlanta_hawks_roster_app" 
