@@ -23,7 +23,7 @@ The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/
 5. Write data to a file in pseudo-code:
     + Open up a file to write in and append data. 
     + Write headers
-    + Run for loop that will make it clean the HTML tags and add their values in an array datas
+    + Run for loop that will make it clean the HTML tags and add their values in an array results
     + Run for loop that will write elements of the array to file
     + When complete, close the file
 6. The output file in CSV format.

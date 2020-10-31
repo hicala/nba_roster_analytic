@@ -1,50 +1,79 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+# If you don't have Beautiful Soup, install with 'conda install beautifulsoup' in terminal
+# Python requires us to explicitly load the libraries that we want to use:
 import requests
 import bs4
-from bs4 import BeautifulSoup as bs
+import re
 
 
-# load and get the website
-response = requests.get('http://duspviz.mit.edu/_assets/data/county_housing_stats.html')
+# In[2]:
 
-# create the soup
+
+# Load a webpage into python so that we can parse it and manipulate it.
+URL = 'https://www.espn.com/nba/team/roster/_/name/atl/atlanta-hawks'
+
+
+# In[3]:
+
+
+# Control of Connection
+# We just turned the website code into a Python object. 
+response = requests.get(URL)
 soup = bs4.BeautifulSoup(response.text, "html.parser")
 
+
+# In[4]:
+
+
 # find all the tags with class city or number
-data = soup.findAll(attrs={'class':['name','fips','tot-pop','median-income','no-housing-units','med-home-val','owner-occupied','house-w-debt','house-wo-debt']})
-
-# print 'data' to console
-print(data)
-
-# Output file
-
-f = open('hilca_us_stats_data.csv','a') # open new file, make sure path to your data file is correct
-
-p = 0 # initial place in array
-l = len(data)-1 # length of array minus one
+data = soup.findAll(attrs={'class':['inline']})
 
 
-f.write("County, State, FIPS Code, Total Pop, Median Income ($), No. of Housing Units, Median Home Value ($), No. of Owner Occupied Housing Units, No. of Owner Occ. Housing Units with Debt, No. of Owner Occ. Housing Units without Debt\n") #write headers
+# In[5]:
 
 
-while p < l: # while place is less than length
-    f.write(data[p].string + ", ") # write county and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write FIPS and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write Total Pop and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write Median Income and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write No. of Housing Units and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write Median Home Value and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write No. of Owner Occupied Housing Units and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + ", ") # write No. of Owner Occ. Housing Units with Debt and add comma
-    p = p + 1 # increment
-    f.write(data[p].string + "\n") # write No. of Owner Occ. Housing Units without Debt and line break
-    p = p + 1 # increment
+f = open('hilca_nba_team_roster.csv','w') # open new file, make sure path to your data file is correct
+f.write("Name\tPos\tAge\tHT\tWT\tCollege\tSalary" + "\n") # write headers
 
-    
+
+# In[6]:
+
+
+results = []
+for element in data:
+    TAG_RE = re.compile(r'<[^>]+>')
+    text = TAG_RE.sub('', str(element))
+    results.append(text)
+
+
+# In[7]:
+
+
+i = 0
+j = 0
+for item in results:
+    if not item:
+        i = 0
+        j = j + 1
+        if j > 1: f.write("\n")
+    else:
+        i = i + 1
+        if (i == 1): f.write(item + "\t") # write name and add tabulator
+        if (i == 2): f.write(item + "\t") # write pos and add tabulator
+        if (i == 3): f.write(item + "\t") # write age and add tabulator
+        if (i == 4): f.write(item + "\t") # write ht and add tabulator
+        if (i == 5): f.write(item + "\t") # write wt and add tabulator
+        if (i == 6): f.write(item + "\t") # write college and add tabulator
+        if (i == 7): f.write(item) # write salary and add tabulator
+
+
+# In[8]:
+
+
 f.close() # close file
+
