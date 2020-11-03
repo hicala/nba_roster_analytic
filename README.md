@@ -1,4 +1,4 @@
-# Atlanta Hawks Roster. A NBA Statistical Analytical research 2019-2020
+# A NBA Statistical Analytical Research: Atlanta Hawks Roster. 2019-2020
 
 ## Summary
 
