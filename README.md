@@ -69,13 +69,6 @@ f.write("Name\tPos\tAge\tHT\tWT\tCollege\tSalary" + "\n") # write headers
 ```
 
 
-
-
-    34
-
-
-
-
 ```python
 results = []
 for element in data:
