@@ -1,6 +1,8 @@
-# Web Scraping using Beautiful Soup
+# Atlanta Hawks Roster. A NBA Statistical Analytical research 2019-2020
 
 ## Summary
+
+This study is part of a serie of statistical analysis in the composition and salary earned by main and key players in the NBA. The maing goal is to get all the information to run a prediction mmodel to simulate a fucntion from the performance versus Salary
 
 I am using Beautiful Soup for the this Python app. Beautiful Soup is a Python library for parsing data out of HTML and XML files (aka webpages). It works with your favorite parser to provide idiomatic ways of navigating, searching, and modifying the parse tree. 
 
