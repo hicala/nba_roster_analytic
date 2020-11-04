@@ -114,9 +114,18 @@ for item in results:
 ```python
 f.close() # close file
 ```
+## Results
+
+* Height average is 6' 7"
+* Age average is 26
+* Weight average is 200 Lbs
+
+Salary information is pending for further analysis 
+
 
 ## Conclusiones
 
-We used Beautiful Soup as the main tool. The major concept with Beautiful Soup is that it allows you to access elements of your page by following the CSS structures, such as grabbing all links, all headers, specific classes, or more. It is a powerful library.
-
- Once we grab elements, Python makes it easy to write the elements or relevant components of the elements into other files, such as a CSV, that can be stored in a database or opened in other software.
+* We used Beautiful Soup as the main tool. 
+* The major concept with Beautiful Soup is that it allows you to access elements of your page by following the CSS structures, such as grabbing all links, all headers, specific classes, or more. 
+* Beautiful Soup is a powerful library.
+* Once we grab elements, Python makes it easy to write the elements or relevant components of the elements into other files, such as a CSV, that can be stored in a database or opened in other software.
