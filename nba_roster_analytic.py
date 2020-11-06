@@ -12,6 +12,8 @@
 # 
 # The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/nba/team/roster/_/name/atl/atlanta-hawks
 
+# ![Home Page](images/home.png)
+
 # ## Methodology
 # 
 # 1. Import Modules
@@ -37,6 +39,9 @@
 # ## Data info extracted:
 # 
 # Name, POS ,Age ,HT ,WT ,College and Salary of Team Roster
+# 
+
+# ![Atlanta Hawks Roster](images/Atlanta-Hawks-Roster.png)
 
 # If you don't have Beautiful Soup, install with 'conda install beautifulsoup' in terminal.
 # 
@@ -77,6 +82,8 @@ soup = bs4.BeautifulSoup(response.text, "html.parser")
 
 data = soup.findAll(attrs={'class':['inline']})
 
+
+# ![Source Code HTML](images/code.png)
 
 # Open new file, make sure path to your data file is correct.
 # 
@@ -125,6 +132,8 @@ for item in results:
 
 f.close() # close file
 
+
+# ![cvs data](images/cvs.png)
 
 # ## Conclusiones
 # 

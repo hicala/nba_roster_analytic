@@ -9,6 +9,8 @@ I am using Beautiful Soup for the this Python app. Beautiful Soup is a Python li
 
 The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/nba/team/roster/_/name/atl/atlanta-hawks
 
+![Home Page](images/home.png)
+
 ## Methodology
 
 1. Import Modules
@@ -34,6 +36,9 @@ The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/
 ## Data info extracted:
 
 Name, POS ,Age ,HT ,WT ,College and Salary of Team Roster
+
+
+![Atlanta Hawks Roster](images/Atlanta-Hawks-Roster.png)
 
 If you don't have Beautiful Soup, install with 'conda install beautifulsoup' in terminal.
 
@@ -70,6 +75,8 @@ Find all the tags with class city or number
 
 data = soup.findAll(attrs={'class':['inline']})
 ```
+
+![Source Code HTML](images/code.png)
 
 Open new file, make sure path to your data file is correct.
 
@@ -114,18 +121,11 @@ for item in results:
 ```python
 f.close() # close file
 ```
-## Results
 
-* Height average is 6' 7"
-* Age average is 26
-* Weight average is 200 Lbs
-
-Salary information is pending for further analysis 
-
+![cvs data](images/cvs.png)
 
 ## Conclusiones
 
-* We used Beautiful Soup as the main tool. 
-* The major concept with Beautiful Soup is that it allows you to access elements of your page by following the CSS structures, such as grabbing all links, all headers, specific classes, or more. 
-* Beautiful Soup is a powerful library.
-* Once we grab elements, Python makes it easy to write the elements or relevant components of the elements into other files, such as a CSV, that can be stored in a database or opened in other software.
+We used Beautiful Soup as the main tool. The major concept with Beautiful Soup is that it allows you to access elements of your page by following the CSS structures, such as grabbing all links, all headers, specific classes, or more. It is a powerful library.
+
+ Once we grab elements, Python makes it easy to write the elements or relevant components of the elements into other files, such as a CSV, that can be stored in a database or opened in other software.
