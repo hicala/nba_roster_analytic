@@ -18,7 +18,7 @@ The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/
 3. Navigate the URL Data Structure
 4. Testing out data requests
 5. Write data to a file in pseudo-code:
-    + Open up a file to write in and append data. 
+    + Open up a file to write in and append data.
     + Write headers
     + Run for loop that will make it clean the HTML tags and add their values in an array results
     + Run for loop that will write elements of the array to file
