@@ -25,7 +25,6 @@ The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/
     + When complete, close the file
 6. The output file in CSV format.
 
-
 ## Main goal
 
 + To access all of the content from the source code of the webpage with Python
