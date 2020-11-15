@@ -88,7 +88,7 @@ f = open('hilca_nba_team_roster.csv','w')
 f.write("Name\tPos\tAge\tHT\tWT\tCollege\tSalary" + "\n")
 ```
 
-Clear HTML tag and assign to the array results
+Clear HTML tag and assign to the array results 
 
 
 ```python
