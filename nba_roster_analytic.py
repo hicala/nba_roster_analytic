@@ -8,7 +8,7 @@
 # 
 # This study is part of a serie of statistical analysis in the composition and salary earned by main and key players in the NBA.
 # 
-# I am using Beautiful Soup for the this Python app. Beautiful Soup is a Python library for parsing data out of HTML and XML files (aka webpages). It works with your favorite parser to provide idiomatic ways of navigating, searching, and modifying the parse tree. 
+# I am using Beautiful Soup for the this Python app. Beautiful Soup is a Python library for parsing data out of HTML and XML files (aka webpages). It works with your favorite parser to provide idiomatic ways of navigating, searching, and modifying the parse tree.
 # 
 # The data I used came from Atlanta Hawks Roster. Reference: https://www.espn.com/nba/team/roster/_/name/atl/atlanta-hawks
 
@@ -95,6 +95,8 @@ data = soup.findAll(attrs={'class':['inline']})
 f = open('hilca_nba_team_roster.csv','w') 
 f.write("Name\tPos\tAge\tHT\tWT\tCollege\tSalary" + "\n")
 
+
+# Clear HTML tag and assign to the array results
 
 # In[19]:
 
